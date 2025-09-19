@@ -4,7 +4,7 @@ import {
     listarTarefas,
     mostrarTarefaPeloId,
     deletarTarefaPorId,
-    modificarTarefa} from '../controllers/tarefasContoller.js'
+    modificarTarefa} from '../controllers/tarefasController.js'
 
 const router = Router();
 

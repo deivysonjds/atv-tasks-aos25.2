@@ -1,4 +1,4 @@
-import Tarefa from "../models/Tarefa";
+import Tarefa from "../models/Tarefa.js";
 
 const tarefasList = [];
 
@@ -42,7 +42,7 @@ function modificarTarefa(objectId, novaTarefa){
 
 }
 
-module.exports = {
+export {
     criarTarefa,
     listarTarefas,
     mostrarTarefaPeloId,
