@@ -1,14 +1,21 @@
 import { Router } from "express";
+import {
+    criarTarefa,
+    listarTarefas,
+    mostrarTarefaPeloId,
+    deletarTarefaPorId,
+    modificarTarefa} from '../controllers/tarefasContoller.js'
 
 const router = Router();
 
 router.get("/", (req, res)=>{
-    res.send("todas as tasks")
+    return res.status(200).json(listarTarefas)
 })
 
 router.get("/:id", (req, res)=>{
     const id = req.params.id
-    res.send(`task ${id}`)
+
+    res.json(`task ${id}`)
 })
 
 router.post("/", (req, res)=>{
