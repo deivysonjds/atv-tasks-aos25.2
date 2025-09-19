@@ -30,15 +30,15 @@ function deletarTarefaPorId(objectId){
 }
 
 function modificarTarefa(objectId, novaTarefa){
-    let index = tarefasList.findIndex(tarefa => objectId === tarefa.objectId);
-    if (index === -1){
+    let tarefa = tarefasList.find(tarefa => objectId === tarefa.objectId);
+    if (tarefa===null){
         throw new Error('Tarefa não localizada');
     }
 
-    if (novaTarefa.concluida !== undefined) tarefasList[index].concluida = novaTarefa.concluida
-    if (novaTarefa.descricao !== undefined) tarefasList[index].descricao = novaTarefa.descricao
+    if (novaTarefa.concluida !== undefined) tarefa.concluida = novaTarefa.concluida
+    if (novaTarefa.descricao !== undefined) tarefa.descricao = novaTarefa.descricao
     
-    return tarefasList[index]
+    return tarefa
 
 }
 
