@@ -9,7 +9,7 @@ import {
 const router = Router();
 
 router.get("/", (req, res)=>{
-    return res.status(200).json(listarTarefas)
+    return res.status(200).json(listarTarefas())
 })
 
 router.get("/:objectId", (req, res)=>{
