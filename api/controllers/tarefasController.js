@@ -34,7 +34,8 @@ function modificarTarefa(objectId, novaTarefa){
     if (tarefa===null){
         throw new Error('Tarefa não localizada');
     }
-
+    console.log(novaTarefa);
+    
     if (novaTarefa.concluida !== undefined) tarefa.concluida = novaTarefa.concluida
     if (novaTarefa.descricao !== undefined) tarefa.descricao = novaTarefa.descricao
     
