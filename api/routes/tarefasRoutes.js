@@ -38,7 +38,7 @@ router.delete("/:objectId", (req, res)=>{
     if (!deletado){
         return res.status(404).send("Tarefa não encontrada")
     }
-    res.status(200)
+    return res.status(200)
 })
 
 router.put("/:objectId", (req, res)=>{
